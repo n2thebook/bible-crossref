@@ -1,0 +1,49 @@
+:root{--bg:#f7f3ec;--card:#fff;--ink:#2a2118;--muted:#7a6d5f;--accent:#7a4b1c;--line:#e6ddd0;
+--Law:#8e5b2b;--History:#5b7a2b;--PoetryWisdom:#2b7a6b;--MajorProphets:#2b4f7a;--MinorProphets:#5a5fa8;--Gospels:#a8323e;--Acts:#c46a1b;--PaulineEpistles:#7a2b6b;--GeneralEpistles:#4a6d8c;--Revelation:#9a7b10}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font:17px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+header{position:sticky;top:0;z-index:5;background:#3b2a1a;color:#fff;padding:8px 10px calc(6px);box-shadow:0 2px 6px #0003}
+header form{display:flex;gap:6px}
+header input{flex:1;min-width:0;font-size:17px;padding:9px 10px;border-radius:10px;border:0}
+header button{font-size:16px;padding:0 16px;border-radius:10px;border:0;background:#d9a441;color:#2a2118;font-weight:600}
+.pickers{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
+.pickers select{font-size:15px;padding:6px;border-radius:8px;border:0;max-width:100%}
+.pickers label{font-size:13px;display:flex;align-items:center;gap:4px;flex:1;white-space:nowrap}
+.pickers label select{flex:1;min-width:0}
+#selBook{flex:2}#selChap,#selVerse{flex:1}
+main{max-width:760px;margin:0 auto;padding:10px}
+.card{background:var(--card);border-radius:14px;padding:12px 14px;margin-bottom:10px;box-shadow:0 1px 3px #0001}
+h1{font-size:21px;margin:0 0 4px}h2{font-size:18px;margin:0 0 8px}
+.muted{color:var(--muted);font-weight:400}.small{font-size:14px}
+.vtext{font-family:Georgia,"Times New Roman",serif;font-size:19px;line-height:1.55;margin:6px 0}
+.badges{display:flex;flex-wrap:wrap;gap:5px;align-items:center;margin:4px 0}
+.badge{font-size:12px;padding:2px 8px;border-radius:999px;color:#fff;background:#777;white-space:nowrap}
+.badge.dir{background:#efe7da;color:#5a4630}
+.badge.votes{background:#f3e3bf;color:#5a4630}
+.topic{font-size:13px;padding:3px 9px;border-radius:999px;border:1px solid var(--line);background:#faf7f2;color:var(--accent);cursor:pointer}
+.navrow{display:flex;gap:8px;margin-top:8px}
+.navrow button,.wide{flex:1;padding:9px;border-radius:10px;border:1px solid var(--line);background:#faf7f2;font-size:15px;color:var(--ink)}
+.wide{width:100%;margin-top:8px}
+a.ext{font-size:14px;color:var(--accent);text-decoration:none;white-space:nowrap}
+.frow{display:flex;flex-wrap:wrap;gap:8px 14px;margin:6px 0;font-size:15px}
+.frow select{font-size:15px;padding:5px;border-radius:8px;border:1px solid var(--line);margin-left:4px}
+.chips label{background:#faf7f2;border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:14px}
+#xrefList{list-style:none;padding:0;margin:8px 0 0}
+#xrefList li{border-top:1px solid var(--line);padding:10px 2px}
+.xhead{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.xref{font-weight:700;color:var(--accent);font-size:17px;cursor:pointer;background:none;border:0;padding:0;text-align:left}
+.xtext{font-family:Georgia,serif;font-size:16px;margin:3px 0;cursor:pointer}
+#chapterText p{margin:4px 0;font-family:Georgia,serif;cursor:pointer;padding:2px 4px;border-radius:6px}
+#chapterText p.cur{background:#f8ecd0}
+#chapterText sup{color:var(--muted);font-family:system-ui;font-size:11px;margin-right:3px}
+summary{cursor:pointer;font-weight:600}
+canvas{width:100%;display:block;background:#1d1610;border-radius:10px}
+.sheet{position:fixed;inset:0;background:#0006;z-index:10;display:flex;align-items:flex-end}
+.sheet[hidden]{display:none}
+.sheet-inner{background:#fff;width:100%;max-height:80vh;overflow:auto;border-radius:16px 16px 0 0;padding:12px 16px}
+.sheet-head{display:flex;justify-content:space-between;align-items:center}
+.sheet-head button{font-size:20px;border:0;background:none}
+#topicRefs{columns:2;padding-left:18px}#topicRefs a{color:var(--accent)}
+#about a{color:var(--accent)}
+.err{color:#a8323e}

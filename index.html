@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#3b2a1a">
+<title>Cross References — Bible Study</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✝</text></svg>">
+</head>
+<body>
+<header>
+  <form id="searchForm" autocomplete="off">
+    <input id="q" type="search" inputmode="text" placeholder="Search a verse, e.g. John 3:16" aria-label="Verse reference">
+    <button type="submit">Go</button>
+  </form>
+  <div class="pickers">
+    <select id="selBook" aria-label="Book"></select>
+    <select id="selChap" aria-label="Chapter"></select>
+    <select id="selVerse" aria-label="Verse"></select>
+  </div>
+  <div class="pickers">
+    <label>Read in <select id="selVersion" aria-label="Bible version"></select></label>
+    <label>Open in <select id="selOpenIn" aria-label="Open in Bible Gateway version"></select></label>
+  </div>
+</header>
+
+<main>
+  <section id="verseCard" class="card"></section>
+
+  <section class="card">
+    <details id="chapterBox">
+      <summary>Read the whole chapter</summary>
+      <div id="chapterText"></div>
+    </details>
+  </section>
+
+  <section class="card" id="filters">
+    <h2>Cross references <span id="xrefCount" class="muted"></span></h2>
+    <div class="frow">
+      <label>Strength
+        <select id="fStrength">
+          <option value="-999">All (every reference)</option>
+          <option value="5">Strong (5+ votes)</option>
+          <option value="10">Stronger (10+ votes)</option>
+          <option value="20">Strongest (20+ votes)</option>
+          <option value="50">Top (50+ votes)</option>
+        </select>
+      </label>
+      <label>Goes to
+        <select id="fGenre"><option value="">Any book type</option></select>
+      </label>
+    </div>
+    <div class="frow chips" id="fDir">
+      <label><input type="checkbox" value="OT>OT" checked> OT → OT</label>
+      <label><input type="checkbox" value="OT>NT" checked> OT → NT</label>
+      <label><input type="checkbox" value="NT>OT" checked> NT → OT</label>
+      <label><input type="checkbox" value="NT>NT" checked> NT → NT</label>
+    </div>
+    <ol id="xrefList"></ol>
+    <button id="moreBtn" class="wide" hidden>Show more</button>
+  </section>
+
+  <section class="card">
+    <h2>Arc map</h2>
+    <div class="frow">
+      <label><input type="radio" name="arcMode" value="chapter" checked> This chapter</label>
+      <label><input type="radio" name="arcMode" value="book"> Whole book</label>
+    </div>
+    <canvas id="arc" height="220"></canvas>
+    <p class="muted small">Every arc is one cross reference (using the filters above) from <span id="arcFrom"></span> to anywhere in the Bible, Genesis on the left to Revelation on the right. Gold arcs belong to the selected verse. Colors show distance.</p>
+  </section>
+
+  <section class="card small" id="about">
+    <h2>About &amp; credits</h2>
+    <p>Cross references: <a href="https://www.openbible.info/labs/cross-references/">OpenBible.info</a> (<span id="xrefTotal">344,799</span> references, drawn mostly from the public-domain <i>Treasury of Scripture Knowledge</i>, ranked by reader votes), licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a>.</p>
+    <p>Topics: <i>Nave's Topical Bible</i> (1897, public domain), from the <a href="https://github.com/BradyStephenson/bible-data">BradyStephenson/bible-data</a> compilation, licensed CC BY 4.0.</p>
+    <p>Bible text:</p>
+    <ul id="versionCredits"></ul>
+    <p>"Open in" links go to <a href="https://www.biblegateway.com/">Bible Gateway</a>. Those versions (NLT, NASB, NIV, ESV, NKJV, CSB) are copyrighted, so their text is not stored in this app.</p>
+  </section>
+</main>
+
+<div id="topicSheet" class="sheet" hidden>
+  <div class="sheet-inner">
+    <div class="sheet-head"><h2 id="topicTitle"></h2><button id="topicClose" aria-label="Close">✕</button></div>
+    <ul id="topicRefs"></ul>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

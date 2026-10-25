@@ -1,0 +1,8 @@
+[
+ {"id":"KJV","name":"King James Version (1769)","loader":"scrollmapper","file":"KJV.json","license":"Public domain (outside the UK; Crown patent in the UK)","source":"scrollmapper/bible_databases","url":"https://github.com/scrollmapper/bible_databases"},
+ {"id":"BSB","name":"Berean Standard Bible","loader":"bsb","license":"Public domain (dedicated April 30, 2023)","source":"bereanbible.com/bsb.txt","url":"https://berean.bible/terms.htm"},
+ {"id":"WEB","name":"World English Bible","loader":"ebible_vpl","license":"Public domain (\"World English Bible\" is a trademark of eBible.org)","source":"ebible.org engwebp","url":"https://ebible.org/web/"},
+ {"id":"ASV","name":"American Standard Version (1901)","loader":"scrollmapper","file":"ASV.json","license":"Public domain","source":"scrollmapper/bible_databases","url":"https://github.com/scrollmapper/bible_databases"},
+ {"id":"YLT","name":"Young's Literal Translation (1898)","loader":"scrollmapper","file":"YLT.json","license":"Public domain","source":"scrollmapper/bible_databases","url":"https://github.com/scrollmapper/bible_databases"},
+ {"id":"Darby","name":"Darby Translation (1890)","loader":"scrollmapper","file":"Darby.json","license":"Public domain","source":"scrollmapper/bible_databases","url":"https://github.com/scrollmapper/bible_databases"}
+]
